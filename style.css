@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87ceeb, #e0f7ff);
+    min-height: 100vh;
+    text-align: center;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    padding: 35px 20px 25px;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+   ========================= */
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    display: inline-block;
+    color: #023e8a;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #0077b6;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MAIN HOME SECTION
+   ========================= */
+
+main {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* =========================
+   SEARCH BOX
+   ========================= */
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #0077b6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #023e8a;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+   ========================= */
+
+#error {
+    color: red;
+    margin: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CURRENT WEATHER CARD
+   ========================= */
+
+.weather-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+
+/* Weather Icon */
+
+#weatherIcon {
+    font-size: 60px;
+    margin: 10px;
+}
+
+
+/* Temperature */
+
+#temperature {
+    font-size: 40px;
+    margin: 10px;
+}
+
+
+/* Weather Condition */
+
+#condition {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+/* =========================
+   WEATHER DETAILS
+   ========================= */
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.details div {
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.details h4 {
+    margin-bottom: 10px;
+}
+
+.details p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   5-DAY FORECAST
+   ========================= */
+
+.forecast-section {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.forecast-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #023e8a;
+}
+
+
+/* Forecast Cards in One Row */
+
+.forecast-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+
+/* Individual Forecast Card */
+
+.forecast-card {
+    min-width: 190px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1;
+}
+
+.forecast-card h3 {
+    margin-bottom: 10px;
+    color: #023e8a;
+    font-size: 20px;
+}
+
+
+/* Forecast Icon */
+
+.forecast-icon {
+    font-size: 45px;
+    margin: 10px;
+}
+
+
+/* Forecast Temperature */
+
+.forecast-temp {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+/* Forecast Condition */
+
+.forecast-condition {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+
+/* Forecast Details */
+
+.forecast-details {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   ABOUT / OBJECTIVE /
+   CONTACT PAGES
+   ========================= */
+
+.content-page {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+
+/* Page Heading */
+
+.content-page h2 {
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+
+/* Page Sub Heading */
+
+.content-page h3 {
+    color: #0077b6;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+
+/* Paragraph */
+
+.content-page p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* List */
+
+.content-page ul {
+    padding-left: 25px;
+}
+
+.content-page li {
+    margin: 12px 0;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CONTACT FORM
+   ========================= */
+
+.content-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content-page input,
+.content-page textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+.content-page input:focus,
+.content-page textarea:focus {
+    border: 2px solid #0077b6;
+}
+
+.content-page textarea {
+    resize: vertical;
+}
+
+
+/* Contact Button */
+
+.content-page button {
+    padding: 13px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.content-page button:hover {
+    background: #023e8a;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #023e8a;
+    color: white;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+
+    /* Navigation */
+
+    nav a {
+        margin: 7px;
+        font-size: 15px;
+    }
+
+
+    /* Search */
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+
+    /* Current Weather */
+
+    .weather-card {
+        padding: 20px;
+    }
+
+    .weather-card h2 {
+        font-size: 25px;
+    }
+
+    #temperature {
+        font-size: 35px;
+    }
+
+
+    /* Weather Details */
+
+    .details {
+        flex-direction: column;
+    }
+
+
+    /* Forecast */
+
+    .forecast-section {
+        width: 95%;
+    }
+
+    .forecast-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    .forecast-card {
+        min-width: 180px;
+        flex: 0 0 180px;
+    }
+
+
+    /* Other Pages */
+
+    .content-page {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .content-page h2 {
+        font-size: 25px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        margin-top: 30px;
+    }
+}
