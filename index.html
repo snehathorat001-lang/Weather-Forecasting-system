@@ -2,18 +2,15 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Weather Forecasting System</title>
 
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 
 <body>
 
@@ -23,29 +20,18 @@
 
         <p>Check current weather and 5-day forecast of any city</p>
 
-        <nav>
-           <a href="index.html">🏠Home</a>
-           <a href="about.html">ℹ️About</a>
-           <a href="objective.html">🎯Objective</a>
-           <a href="contact.html">📞Contact</a>
+        <nav class="main-nav">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">ℹ️ About</a>
+            <a href="objective.html">🎯 Objective</a>
+            <a href="contact.html">📞 Contact</a>
         </nav>
+
     </header>
 
-
-    <nav>
-
-        <a href="#weather">🌤️ Weather</a>
-
-        <a href="#forecast">📅 Forecast</a>
-
-        <a href="#chart">📊 Chart</a>
-
-
-    </nav>
-
+    
 
     <main>
-
 
         <section id="home" class="home-section">
 
@@ -55,13 +41,12 @@
                 Enter a city name to get the latest weather information.
             </p>
 
-
             <div class="search-box">
 
                 <input
                     type="text"
                     id="city"
-                    placeholder="Enter city name"
+                    aria-label="Enter city name"
                 >
 
                 <button onclick="getWeather()">
@@ -70,122 +55,71 @@
 
             </div>
 
-
-            <button onclick="getLocationWeather()"
-                    class="location-btn">
+            <button
+                onclick="getLocationWeather()"
+                class="location-btn">
 
                 📍 Use My Current Location
 
             </button>
 
-
-            <p id="error"></p>
+            <p id="error" role="status"></p>
 
         </section>
-
 
         <section id="weather" class="weather-section">
 
             <h2>🌤️ Current Weather</h2>
 
-
             <div class="weather-card">
 
-                <h2 id="cityName">
-                    City
-                </h2>
+                <h2 id="cityName">City</h2>
 
-
-                <div id="weatherIcon">
+                <div id="weatherIcon" aria-label="Weather icon">
                     🌤️
                 </div>
 
+                <h1 id="temperature">-- °C</h1>
 
-                <h1 id="temperature">
-                    -- °C
-                </h1>
-
-
-                <p id="condition">
-                    Weather Condition
-                </p>
-
+                <p id="condition">Weather Condition</p>
 
                 <div class="details">
 
-
                     <div>
-
                         <h4>💧 Humidity</h4>
-
-                        <p id="humidity">
-                            -- %
-                        </p>
-
+                        <p id="humidity">-- %</p>
                     </div>
 
-
                     <div>
-
                         <h4>🌬️ Wind Speed</h4>
-
-                        <p id="wind">
-                            -- m/s
-                        </p>
-
+                        <p id="wind">-- m/s</p>
                     </div>
 
-
                     <div>
-
                         <h4>🌡️ Feels Like</h4>
-
-                        <p id="feels">
-                            -- °C
-                        </p>
-
+                        <p id="feels">-- °C</p>
                     </div>
-
 
                     <div>
-
                         <h4>📊 Pressure</h4>
-
-                        <p id="pressure">
-                            -- hPa
-                        </p>
-
+                        <p id="pressure">-- hPa</p>
                     </div>
-
 
                 </div>
-
 
                 <div class="sun-details">
 
                     <div>
-
                         <h4>🌅 Sunrise</h4>
-
-                        <p id="sunrise">
-                            --:--
-                        </p>
-
+                        <p id="sunrise">--:--</p>
                     </div>
 
-
                     <div>
-
                         <h4>🌇 Sunset</h4>
-
-                        <p id="sunset">
-                            --:--
-                        </p>
-
+                        <p id="sunset">--:--</p>
                     </div>
 
                 </div>
-
 
             </div>
 
@@ -196,9 +130,13 @@
 
             <h2>📅 5-Day Weather Forecast</h2>
 
+            <p>
+                View the upcoming daily weather forecast.
+            </p>
 
-            <div id="forecastContainer"
-                 class="forecast-container">
+            <div
+                id="forecastContainer"
+                class="forecast-container">
 
                 <p>
                     Search a city to see the 5-day forecast.
@@ -209,35 +147,59 @@
         </section>
 
 
+        <section id="chart" class="chart-section">
+
+            <h2>📊 5-Day Temperature Graph</h2>
+
+            <p>
+                Compare the forecast temperature for each day.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas
+                    id="weatherChart"
+                    aria-label="Five-day temperature graph">
+                </canvas>
+
+            </div>
+
+        </section>
+
+
+        <section id="hourlyChart" class="chart-section">
+
+            <h2>🌡️ Today's Hourly Temperature Graph</h2>
+
+            <p id="hourlyChartStatus">
+                Search a city to view today's available temperature forecast.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas
+                    id="hourlyWeatherChart"
+                    aria-label="Today's hourly temperature graph">
+                </canvas>
+
+            </div>
+
+        </section>
+
+
         <section id="alerts" class="alert-section">
 
             <h2>⚠️ Weather Alerts</h2>
 
-
             <div id="weatherAlert">
 
                 <p>
-                    Search a city to check weather alerts.
+                    Search a city to check current weather conditions.
                 </p>
 
             </div>
 
         </section>
-
-
-        <section id="chart" class="chart-section">
-
-            <h2>📊 Temperature Chart</h2>
-
-
-            <div class="chart-container">
-
-                <canvas id="weatherChart"></canvas>
-
-            </div>
-
-        </section>
-
 
     </main>
 
@@ -252,14 +214,14 @@
             BCA College Project
         </p>
 
+        <p>
+            Developed using HTML, CSS, JavaScript and OpenWeatherMap API.
+        </p>
+
     </footer>
 
 
     <script src="script.js"></script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 
 </body>
 

@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-/* =========================
-   BODY
-   ========================= */
 
 body {
     font-family: Arial, sans-serif;
@@ -16,10 +13,6 @@ body {
     color: #222;
 }
 
-
-/* =========================
-   HEADER
-   ========================= */
 
 header {
     padding: 35px 20px 25px;
@@ -34,10 +27,6 @@ header p {
     font-size: 18px;
 }
 
-
-/* =========================
-   NAVIGATION BAR
-   ========================= */
 
 nav {
     margin-top: 20px;
@@ -58,20 +47,12 @@ nav a:hover {
 }
 
 
-/* =========================
-   MAIN HOME SECTION
-   ========================= */
-
 main {
     width: 90%;
     max-width: 600px;
     margin: auto;
 }
 
-
-/* =========================
-   SEARCH BOX
-   ========================= */
 
 .search-box {
     display: flex;
@@ -104,20 +85,12 @@ main {
 }
 
 
-/* =========================
-   ERROR MESSAGE
-   ========================= */
-
 #error {
     color: red;
     margin: 10px;
     font-weight: bold;
 }
 
-
-/* =========================
-   CURRENT WEATHER CARD
-   ========================= */
 
 .weather-card {
     background: white;
@@ -132,15 +105,11 @@ main {
 }
 
 
-/* Weather Icon */
-
 #weatherIcon {
     font-size: 60px;
     margin: 10px;
 }
 
-
-/* Temperature */
 
 #temperature {
     font-size: 40px;
@@ -148,17 +117,11 @@ main {
 }
 
 
-/* Weather Condition */
-
 #condition {
     font-size: 20px;
     text-transform: capitalize;
 }
 
-
-/* =========================
-   WEATHER DETAILS
-   ========================= */
 
 .details {
     display: flex;
@@ -183,10 +146,6 @@ main {
 }
 
 
-/* =========================
-   5-DAY FORECAST
-   ========================= */
-
 .forecast-section {
     width: 95%;
     max-width: 1200px;
@@ -200,8 +159,6 @@ main {
 }
 
 
-/* Forecast Cards in One Row */
-
 .forecast-container {
     display: flex;
     flex-direction: row;
@@ -212,9 +169,6 @@ main {
     overflow-x: auto;
     padding: 10px;
 }
-
-
-/* Individual Forecast Card */
 
 .forecast-card {
     min-width: 190px;
@@ -233,15 +187,11 @@ main {
 }
 
 
-/* Forecast Icon */
-
 .forecast-icon {
     font-size: 45px;
     margin: 10px;
 }
 
-
-/* Forecast Temperature */
 
 .forecast-temp {
     font-size: 22px;
@@ -249,27 +199,17 @@ main {
     margin: 10px;
 }
 
-
-/* Forecast Condition */
-
 .forecast-condition {
     text-transform: capitalize;
     margin-bottom: 10px;
 }
 
 
-/* Forecast Details */
-
 .forecast-details {
     font-size: 14px;
     line-height: 1.8;
 }
 
-
-/* =========================
-   ABOUT / OBJECTIVE /
-   CONTACT PAGES
-   ========================= */
 
 .content-page {
     width: 90%;
@@ -283,8 +223,6 @@ main {
 }
 
 
-/* Page Heading */
-
 .content-page h2 {
     text-align: center;
     color: #023e8a;
@@ -293,8 +231,6 @@ main {
 }
 
 
-/* Page Sub Heading */
-
 .content-page h3 {
     color: #0077b6;
     margin-top: 25px;
@@ -302,15 +238,11 @@ main {
 }
 
 
-/* Paragraph */
-
 .content-page p {
     line-height: 1.7;
     margin-bottom: 15px;
 }
 
-
-/* List */
 
 .content-page ul {
     padding-left: 25px;
@@ -321,10 +253,6 @@ main {
     line-height: 1.5;
 }
 
-
-/* =========================
-   CONTACT FORM
-   ========================= */
 
 .content-page form {
     display: flex;
@@ -353,8 +281,6 @@ main {
 }
 
 
-/* Contact Button */
-
 .content-page button {
     padding: 13px;
     background: #0077b6;
@@ -369,11 +295,6 @@ main {
     background: #023e8a;
 }
 
-
-/* =========================
-   FOOTER
-   ========================= */
-
 footer {
     margin-top: 50px;
     padding: 20px;
@@ -386,13 +307,8 @@ footer p {
 }
 
 
-/* =========================
-   MOBILE RESPONSIVE DESIGN
-   ========================= */
-
 @media (max-width: 600px) {
 
-    /* Header */
 
     header {
         padding: 25px 15px;
@@ -407,15 +323,11 @@ footer p {
     }
 
 
-    /* Navigation */
-
     nav a {
         margin: 7px;
         font-size: 15px;
     }
 
-
-    /* Search */
 
     .search-box {
         flex-direction: column;
@@ -430,8 +342,6 @@ footer p {
     }
 
 
-    /* Current Weather */
-
     .weather-card {
         padding: 20px;
     }
@@ -445,14 +355,11 @@ footer p {
     }
 
 
-    /* Weather Details */
 
     .details {
         flex-direction: column;
     }
 
-
-    /* Forecast */
 
     .forecast-section {
         width: 95%;
@@ -469,8 +376,6 @@ footer p {
     }
 
 
-    /* Other Pages */
-
     .content-page {
         width: 90%;
         padding: 25px;
@@ -480,8 +385,6 @@ footer p {
         font-size: 25px;
     }
 
-
-    /* Footer */
 
     footer {
         margin-top: 30px;
