@@ -15,31 +15,17 @@
 <body>
 
     <header>
-
         <h1>🌤️ Weather Forecasting System</h1>
-
         <p>Check current weather and 5-day forecast of any city</p>
-
-        <nav class="main-nav">
-            <a href="index.html">🏠 Home</a>
-            <a href="about.html">ℹ️ About</a>
-            <a href="objective.html">🎯 Objective</a>
-            <a href="contact.html">📞 Contact</a>
-        </nav>
-
     </header>
 
     
 
-    <main>
+    <main id="home">
 
-        <section id="home" class="home-section">
+        <section class="search-section">
 
-            <h2>🌍 Weather Information</h2>
-
-            <p>
-                Enter a city name to get the latest weather information.
-            </p>
+            <h2>Search Weather</h2>
 
             <div class="search-box">
 
@@ -47,156 +33,128 @@
                     type="text"
                     id="city"
                     placeholder="Enter city name"
-                    aria-label="Enter city name"
+                    autocomplete="off"
                 >
 
                 <button onclick="getWeather()">
-                    🔍 Search
+                    Search
                 </button>
 
             </div>
 
-            <button
-                onclick="getLocationWeather()"
-                class="location-btn">
-
+            <button class="location-button" onclick="getLocationWeather()">
                 📍 Use My Current Location
-
             </button>
 
             <p id="error" role="status"></p>
 
         </section>
 
-        <section id="weather" class="weather-section">
+        <section class="weather-section">
 
-            <h2>🌤️ Current Weather</h2>
+            <h2>Current Weather</h2>
 
-            <div class="weather-card">
+            <div class="current-weather">
 
-                <h2 id="cityName">City</h2>
+                <h2 id="cityName">Search a city to see weather</h2>
 
-                <div id="weatherIcon" aria-label="Weather icon">
+                <div id="weatherIcon" class="weather-icon">
                     🌤️
                 </div>
 
                 <h1 id="temperature">-- °C</h1>
 
-                <p id="condition">Weather Condition</p>
+                <p id="condition">Weather condition</p>
 
-                <div class="details">
+            </div>
 
-                    <div>
-                        <h4>💧 Humidity</h4>
-                        <p id="humidity">-- %</p>
-                    </div>
+            <div class="weather-details">
 
-                    <div>
-                        <h4>🌬️ Wind Speed</h4>
-                        <p id="wind">-- m/s</p>
-                    </div>
-
-                    <div>
-                        <h4>🌡️ Feels Like</h4>
-                        <p id="feels">-- °C</p>
-                    </div>
-
-                    <div>
-                        <h4>📊 Pressure</h4>
-                        <p id="pressure">-- hPa</p>
-                    </div>
-
+                <div class="detail-card">
+                    <span>💧</span>
+                    <h3>Humidity</h3>
+                    <p id="humidity">-- %</p>
                 </div>
 
-                <div class="sun-details">
+                <div class="detail-card">
+                    <span>🌬️</span>
+                    <h3>Wind Speed</h3>
+                    <p id="wind">-- km/h</p>
+                </div>
 
-                    <div>
-                        <h4>🌅 Sunrise</h4>
-                        <p id="sunrise">--:--</p>
-                    </div>
+                <div class="detail-card">
+                    <span>🌡️</span>
+                    <h3>Feels Like</h3>
+                    <p id="feels">-- °C</p>
+                </div>
 
-                    <div>
-                        <h4>🌇 Sunset</h4>
-                        <p id="sunset">--:--</p>
-                    </div>
+                <div class="detail-card">
+                    <span>📊</span>
+                    <h3>Pressure</h3>
+                    <p id="pressure">-- hPa</p>
+                </div>
 
+                <div class="detail-card">
+                    <span>🌅</span>
+                    <h3>Sunrise</h3>
+                    <p id="sunrise">--:--</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌇</span>
+                    <h3>Sunset</h3>
+                    <p id="sunset">--:--</p>
                 </div>
 
             </div>
 
         </section>
 
-
-        <section id="forecast" class="forecast-section">
-
-            <h2>📅 5-Day Weather Forecast</h2>
-
-            <p>
-                View the upcoming daily weather forecast.
-            </p>
-
-            <div
-                id="forecastContainer"
-                class="forecast-container">
-
-                <p>
-                    Search a city to see the 5-day forecast.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section id="chart" class="chart-section">
-
-            <h2>📊 5-Day Temperature Graph</h2>
-
-            <p>
-                Compare the forecast temperature for each day.
-            </p>
-
-            <div class="chart-container">
-
-                <canvas
-                    id="weatherChart"
-                    aria-label="Five-day temperature graph">
-                </canvas>
-
-            </div>
-
-        </section>
-
-
-        <section id="hourlyChart" class="chart-section">
-
-            <h2>🌡️ Today's Hourly Temperature Graph</h2>
-
-            <p id="hourlyChartStatus">
-                Search a city to view today's available temperature forecast.
-            </p>
-
-            <div class="chart-container">
-
-                <canvas
-                    id="hourlyWeatherChart"
-                    aria-label="Today's hourly temperature graph">
-                </canvas>
-
-            </div>
-
-        </section>
-
-
-        <section id="alerts" class="alert-section">
+        <section class="alert-section">
 
             <h2>⚠️ Weather Alerts</h2>
 
             <div id="weatherAlert">
+                <p>Search a city to check weather conditions.</p>
+            </div>
 
-                <p>
-                    Search a city to check current weather conditions.
-                </p>
+        </section>
+
+        <section class="forecast-section" id="forecast">
+
+            <h2>📅 5 Days Weather Forecast</h2>
+
+            <div id="forecastContainer" class="forecast-container">
+
+                <p>Search a city to see the forecast.</p>
+
+            </div>
+
+        </section>
+
+        <section class="chart-section" id="chart">
+
+            <h2>📈 5 Days Temperature Graph</h2>
+
+            <div class="chart-container">
+
+                <canvas id="weatherChart"></canvas>
+
+            </div>
+
+        </section>
+
+        <section class="chart-section">
+
+            <h2>🕒 Today's Temperature Graph</h2>
+
+            <p id="hourlyChartStatus">
+                Search a city to see today's temperature graph.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas id="hourlyWeatherChart"></canvas>
 
             </div>
 
@@ -204,23 +162,14 @@
 
     </main>
 
-
     <footer>
 
         <p>
-            © 2026 Weather Forecasting System
+            Weather Forecasting System
         </p>
 
-        <p>
-            BCA College Project
-        </p>
-
-        <p>
-            Developed using HTML, CSS, JavaScript and OpenWeatherMap API.
-        </p>
 
     </footer>
-
 
     <script src="script.js"></script>
 
